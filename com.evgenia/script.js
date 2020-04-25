@@ -10,6 +10,7 @@
 // });
 
 var btn = document.getElementById('button');
+var nav = document.getElementById('mainNav');
 
 btn.onclick = function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -20,5 +21,11 @@ $(window).scroll(function () {
         btn.classList.add('show');
     } else {
         btn.classList.remove('show');
+    }
+
+    if ($(window).scrollTop() >= window.innerHeight) {
+        nav.classList.remove('mainNav');
+    } else {
+        nav.classList.add('mainNav');
     }
 });
