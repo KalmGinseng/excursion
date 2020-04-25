@@ -9,17 +9,23 @@
 //     }
 // });
 
-var btn = $('#button');
+var btn = document.getElementById('button');
+var nav = document.getElementById('mainNav');
 
-$(window).scroll(function() {
+btn.onclick = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+$(window).scroll(function () {
     if ($(window).scrollTop() > 300) {
-        btn.addClass('show');
+        btn.classList.add('show');
     } else {
-        btn.removeClass('show');
+        btn.classList.remove('show');
     }
-});
 
-btn.on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '300');
+    if ($(window).scrollTop() >= window.innerHeight) {
+        nav.classList.remove('mainNav');
+    } else {
+        nav.classList.add('mainNav');
+    }
 });
