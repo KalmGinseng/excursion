@@ -16,6 +16,14 @@ btn.onclick = function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
+if($(window).scrollTop() > 300) {
+    btn.classList.add('show');
+}
+
+if($(window).scrollTop() >= window.innerHeight) {
+    nav.classList.add('mainNav');
+}
+
 $(window).scroll(function () {
     if ($(window).scrollTop() > 300) {
         btn.classList.add('show');
