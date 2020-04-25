@@ -15,8 +15,7 @@ body, html{
 }
 
 .mainNav {
-    background-image: linear-gradient(#101920 30%, transparent);
-    background-color: #000;
+    background-color: rgb(0,0,0,0.85) !important;
 }
 
 .navbar-brand img {

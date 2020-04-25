@@ -24,8 +24,8 @@ $(window).scroll(function () {
     }
 
     if ($(window).scrollTop() >= window.innerHeight) {
-        nav.classList.remove('mainNav');
-    } else {
         nav.classList.add('mainNav');
+    } else {
+        nav.classList.remove('mainNav');
     }
 });
